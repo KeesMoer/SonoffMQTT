@@ -1,6 +1,6 @@
 # Sonoff_MQTT
 
-Basic Sonoff MQTT interface for WiFi power switch
+Educational simple Sonoff power switching via WiFi and MQTT 
 
 ## Introduction
 
@@ -60,16 +60,16 @@ Edit these to reflect your own situation.
 Part of source code to adapt:
 
 ```
-#define SONOFF "Sonoff5"						// name of your device
-#define MYTOPICS "MyMQTT/"						// MQTT path
+#define SONOFF "Sonoff5"                        // name of your device
+#define MYTOPICS "MyMQTT/"                      // MQTT path
 
-const char* ssid            = "<yourSSID>";		// Network WiFi SSID
-const char* password        = "<yourPassword>";	// Network WiFi password
+const char* ssid            = "<yourSSID>";     // Network WiFi SSID
+const char* password        = "<yourPassword>"; // Network WiFi password
 
-const char* mqtt_server     = "192.168.xxx.xx";	// MQTT server Ethernet address
-const int   mqtt_port       = 1883;				// MQTT port number, 1883 is default
-const char* mqtt_user       = SONOFF;			// the MQTT device name
-const char* mqtt_password   = "MQTTpassword";  	// the MQTT device password
+const char* mqtt_server     = "192.168.xxx.xx"; // MQTT server Ethernet address
+const int   mqtt_port       = 1883;             // MQTT port number, 1883 is default
+const char* mqtt_user       = SONOFF;           // the MQTT device name
+const char* mqtt_password   = "MQTTpassword";   // the MQTT device password
 ```
 
 The Sonoff with this firmware can be configured via MQTT to subscribe (listen) to
@@ -88,5 +88,9 @@ where it will expect the string '0' or '1' for respectively off and on.
 
 ## License
 
-Still to select, but permissive: feel free to use, no strings attached.
-Would be nice to acknowledge me.
+GNU General Public License v3.0
+
+Permissions of this strong copyleft license are conditioned on making available
+complete source code of licensed works and modifications, which include larger
+works using a licensed work, under the same license. Copyright and license
+notices must be preserved. Contributors provide an express grant of patent rights.
